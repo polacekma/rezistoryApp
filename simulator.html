@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulator</title>
+
+    <html><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Simulátor obvodu s Voltmetrem</title>
+        <script src="app/util.js" type="text/javascript"></script>
+        <script src="app/logika.js" type="text/javascript"></script>
+        <script src="app/obvod.js" type="text/javascript"></script>
+        <style type="text/css"><!--
+        body {
+            background-color: #eee; padding: 3px; margin: 0; overflow: hidden;
+        }
+        canvas { background-color: #fff; border: 1px outset #aaa }
+        p { margin: 0; padding: 3px }
+        div#about {
+            float: right; text-align: right; width: 18em
+        }
+        div#leadoutput {
+            background-color: #a00; color: #fff; font-weight: bold; padding: 3px;
+            position: absolute; top: 10px; width: 190px; text-align: right
+        }
+        canvas.clickable {
+            cursor: hand;
+            cursor: pointer;
+        }
+        .hiddenlink {
+            display: none;
+        }
+        --></style>
+        <p>
+            <a href="index.html">Odejít ze simulátoru -----> Hlavní stránka</a><br>
+            <li> </li>
+        </p>
+
+    </head>
+<body onload="init();" onresize="velikost_plochy();" onkeydown="return kdown(event);" onselectstart="return selectstart(event);">
+
+<div id="leadoutput" style="left: 1602px;"><em>v</em><sub>+</sub> = ?? (short circuit?)</div>
+
+<canvas id="circarea" width="1912" height="386" onmousedown="md(event);" onmouseup="mu(event);" onmousemove="mm(event);" onmouseover="mover(event);" onmouseout="mout(event);" class="">
+    <p>Webový prohlížeč nepodporuje spuštění appletu.</p>
+</canvas>
+
+<div><p><span id="statusmsg"></span></p></div>
+
+<script type="text/javascript"><!--
+if (window.location.search.substring(1) == "debug") {
+    document.getElementById("debuglink").className = "";
+}
+// --></script>
+
+
+<script type="text/javascript">
+    var pageTracker = gat._getTracker("UA-1837455-3");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
